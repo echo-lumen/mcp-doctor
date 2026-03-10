@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-doctor"
+version = "0.1.0"
+description = "Health check CLI for MCP servers — connect, enumerate, smoke-test, report"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+]
+
+[project.scripts]
+mcp-doctor = "src.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["src*"]
